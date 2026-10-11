@@ -43,3 +43,14 @@ int main()
 
     return 0;
 }
+
+
+/*DRUGI NACIN pod a
+
+    #include <cctype>
+
+    std::cout << "Inicijali: ";
+    for (int i = 0; i < imePrezime.length(); i++) {
+        if (i == 0 && std::isalpha(imePrezime[i])) { std::cout << (char)std::toupper(imePrezime[i]) << "."; }
+        else if (std::isalpha(imePrezime[i]) && !std::isalpha(imePrezime[i - 1])) { std::cout << (char)std::toupper(imePrezime[i]) << "."; }
+    };*/
