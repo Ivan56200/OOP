@@ -1,3 +1,13 @@
+/*Napišite funkciju bool split_email (const std::string& email, std::string& user, std::string& domain) koja e-mail adresu dijeli na
+korisničko ime (dio prije @) i domenu (dio iza @). Funkcija vraća false ako adresa nije ispravna:
+  o nema znaka @ ili ih ima više (find, rfind),
+  o @ je na početku ili na kraju,
+  o u domeni nema točke.
+Adresu korisnik unosi kao cijeli redak (std::getline).
+"ana.horvat@oss.unist.hr" -> korisnik: ana.horvat, domena: oss.unist.hr 
+"ana@horvat@oss.unist.hr" -> neispravna adresa
+"ana.horvat@oss" -> neispravna adresa*/
+
 #include <iostream>
 #include <string>
 #include <algorithm>
