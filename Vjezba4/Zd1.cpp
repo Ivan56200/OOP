@@ -1,4 +1,18 @@
-﻿#include <iostream>
+/*Pomoću funkcije input_vector iz prošle vježbe unesite vektor cijelih brojeva, a zatim broj k > 0. 
+Koristeći STL algoritme i lambda izraze:
+◦ prebrojite negativne brojeve,
+◦ pronađite prvi višekratnik broja k i njegovu poziciju; ako ga nema, ispišite poruku,
+◦ pronađite najmanji i najveći broj i njihove pozicije,
+◦ uklonite sve višekratnike broja k i ispišite vektor.
+
+Unesite brojeve (0 za kraj): 12 -7 9 4 -3 15 8 0
+k: 3
+negativnih: 2
+prvi visekratnik od 3: 12 (pozicija 0)
+min -7 (pozicija 1), max 15 (pozicija 5)
+bez visekratnika: -7 4 8*/
+	
+#include <iostream>
 #include <vector>
 #include <algorithm>
 #include <iterator>
