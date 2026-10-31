@@ -67,3 +67,27 @@ int main(){
 
     return 0;
 }
+
+
+
+//DRUGI NACIN
+/*
+std::vector<std::string> split_words(const std::string& text){
+	std::vector<std::string> rijeci;
+
+	auto pocetak = std::find_if(text.begin(), text.end(),
+		[](unsigned char c) { return std::isalpha(c); });
+
+	while (pocetak != text.end()){
+		auto kraj = std::find(pocetak, text.end(), ' ');
+		rijeci.emplace_back(pocetak, kraj);
+
+		if (kraj == text.end())
+			break;
+
+		pocetak = std::find_if(kraj + 1, text.end(),
+			[](unsigned char c) { return std::isalpha(c); });
+	}
+
+	return rijeci;
+}*/
