@@ -6,16 +6,17 @@
 void input_vector(std::vector<int>& v) {
 	v.reserve(100);
 
+	int broj;
 	std::cout << "Unesite brojeve (0 za kraj): ";
-	while (std::cin >> broj) {
+	while (std::cin >> broj && broj != 0) {
 		v.push_back(broj);
 	}
+	v.shrink_to_fit();
 }
 
 int main(void) {
 	std::vector<int> broj{};
 	int k;
-
 
 	input_vector(broj);
 
@@ -39,7 +40,7 @@ int main(void) {
 	
 	if (prvi != broj.end()) {
 		std::cout << "Prvi visekratnik od " << k << *prvi
-			<< " pozicija: " << std::distance(broj.begin(), prvi)
+			<< " pozicija: " << std::distance(broj.begin(), prvi);
 	}
 	else {
 		std::cout << "Nema visekratnika broja "	<< k << std::endl;
@@ -59,8 +60,8 @@ int main(void) {
 
 	std::cout << "Bez visekratnika: ";
 
-	for (int x : broj) {
-		std::cout << x << " ";
+	for (int i : broj) {
+		std::cout << i << " ";
 	}
 
 	std::cout << std::endl;
