@@ -19,7 +19,7 @@ VS Code: u datoteci .vscode/tasks.json u popis "args" dodati "-Wall", "-Wextra"*
 class Clip {
     int start;
     int end;
-    int length;
+    int length;    //Članovi klase se uvijek inicijaliziraju redoslijedom kojim su napisani u klasi, ne redoslijedom u konstruktoru.
     std::string name;
     const int max_length;
 public:
